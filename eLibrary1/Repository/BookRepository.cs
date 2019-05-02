@@ -22,6 +22,7 @@ namespace eLibrary1.Repository
         public async Task<Book> GetByIdAsync(int id)
         {
             Book books = await db.Books.FindAsync(id);
+           // _log.Info(string.Format(@"Gets Book by id: Id {id} Bookname {books}"));
             return books;
         }
 

@@ -10,9 +10,11 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using eLibrary1.Models;
+using eLibrary1.Filter;
 
 namespace eLibrary1.Controllers
 {
+    [Logger]
     public class PeopleController : ApiController
     {
         private eLibrary1Context db = new eLibrary1Context();

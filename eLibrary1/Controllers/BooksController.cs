@@ -38,6 +38,7 @@ namespace eLibrary1.Controllers
         }
 
         // GET: api/Books/5
+        //[Route("api/Books/GetBook/{id}")]
         [ResponseType(typeof(Book))]
         [BasicAuthentication]
         public async Task<IHttpActionResult> GetBook(int id)
@@ -103,10 +104,10 @@ namespace eLibrary1.Controllers
             //    return BadRequest(ModelState);
             //}
 
-            //db.Books.Add(book);
+            //db.Books.Add(books);
             //await db.SaveChangesAsync();
 
-            //return CreatedAtRoute("DefaultApi", new { id = book.Id }, book);
+            //return CreatedAtRoute("DefaultApi", new { id = books.Id }, books);
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
